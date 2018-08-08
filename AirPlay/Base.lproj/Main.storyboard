@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSN-pY-vW5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tableview Controller-->
+        <scene sceneID="3Ny-yp-dvP">
+            <objects>
+                <tableViewController id="4Gr-dC-n04" customClass="tableviewController" customModule="AirPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hgT-uN-4wH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="ipI-mS-R78">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ipI-mS-R78" id="Pt9-gX-DMG">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Gr-dC-n04" id="wew-id-BED"/>
+                            <outlet property="delegate" destination="4Gr-dC-n04" id="SBw-9a-V0T"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ftX-ni-apd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iby-gC-b6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="-580"/>
+        </scene>
+        <!--Air Play2 View Controller-->
+        <scene sceneID="Z7s-sf-BGA">
+            <objects>
+                <viewController storyboardIdentifier="airplay2" id="5Cq-gK-jjs" customClass="AirPlay2ViewController" customModule="AirPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tnv-Nt-n2k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AirPlay2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZk-V7-1Sm">
+                                <rect key="frame" x="156" y="323" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIz-23-Mfb">
+                                <rect key="frame" x="162" y="78" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hS-12-Bim">
+                                <rect key="frame" x="142" y="617" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="doPlay:" destination="5Cq-gK-jjs" eventType="touchUpInside" id="2Tk-8V-4IL"/>
+                                    <action selector="playAudio:" destination="5Cq-gK-jjs" eventType="touchUpInside" id="fzk-H8-8aj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9r5-ei-3cT">
+                                <rect key="frame" x="214" y="617" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="doPause:" destination="5Cq-gK-jjs" eventType="touchUpInside" id="yDy-2h-1bZ"/>
+                                    <action selector="pauseAudio:" destination="5Cq-gK-jjs" eventType="touchUpInside" id="H7o-Tu-3Ax"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-J3-8oL">
+                                <rect key="frame" x="14" y="560" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onDragEnter:" destination="5Cq-gK-jjs" eventType="touchDragInside" id="1rr-bH-V1c"/>
+                                    <action selector="onDragEnter:" destination="5Cq-gK-jjs" eventType="touchDragEnter" id="dOJ-sR-boy"/>
+                                    <action selector="onDragExit:" destination="5Cq-gK-jjs" eventType="touchUpInside" id="9qn-im-uT5"/>
+                                    <action selector="onDragExit:" destination="5Cq-gK-jjs" eventType="touchDragExit" id="WCD-EV-B6K"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKj-kR-JXk">
+                                <rect key="frame" x="162" y="419" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Detect"/>
+                                <connections>
+                                    <action selector="doDetect:" destination="5Cq-gK-jjs" eventType="touchUpInside" id="LXz-C1-PgV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5F1-1n-yg4"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="9r5-ei-3cT" id="EU6-hj-eaE"/>
+                        <outlet property="playButton" destination="7hS-12-Bim" id="Ywk-Eb-KS6"/>
+                        <outlet property="seekBar" destination="ig9-J3-8oL" id="mWm-gO-5mm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hry-BQ-ZBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349.5999999999999" y="-46.326836581709152"/>
+        </scene>
+        <!--Air Play View Controller-->
+        <scene sceneID="tF9-5C-ZbI">
+            <objects>
+                <viewController storyboardIdentifier="airplay" id="FS4-cf-0xv" customClass="AirPlayViewController" customModule="AirPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ica-g4-Vzt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AirPlay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJT-af-2dJ">
+                                <rect key="frame" x="166" y="323" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Eg-G2-GhS">
+                                <rect key="frame" x="124" y="258" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="FS4-cf-0xv" eventType="touchUpInside" id="eV1-Sr-Ngg"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UKu-yy-Kfu">
+                                <rect key="frame" x="14" y="210" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onDragEnter:" destination="FS4-cf-0xv" eventType="touchDragEnter" id="6yZ-RH-DXC"/>
+                                    <action selector="onDragEnter:" destination="FS4-cf-0xv" eventType="touchDragInside" id="KVa-xK-W9t"/>
+                                    <action selector="onDragExit:" destination="FS4-cf-0xv" eventType="touchUpInside" id="Ygh-78-uTh"/>
+                                    <action selector="onDragExit:" destination="FS4-cf-0xv" eventType="touchDragExit" id="cc3-gL-ChR"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQT-Ms-KxX">
+                                <rect key="frame" x="225" y="258" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="pauseAudio:" destination="FS4-cf-0xv" eventType="touchUpInside" id="POg-f9-BTw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ys0-Zd-rZU"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="NQT-Ms-KxX" id="Eb9-SH-gy5"/>
+                        <outlet property="playButton" destination="1Eg-G2-GhS" id="1lL-8q-OcB"/>
+                        <outlet property="seekBar" destination="UKu-yy-Kfu" id="f4t-fh-Yw9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iq2-Y9-yfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349.5999999999999" y="-833.43328335832086"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W6P-c1-NLc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DSN-pY-vW5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a27-qT-4o4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Gr-dC-n04" kind="relationship" relationship="rootViewController" id="P3N-fk-ZBj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xb2-c7-ral" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="-579.76011994002999"/>
+        </scene>
+    </scenes>
+</document>
